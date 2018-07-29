@@ -8,4 +8,5 @@ with tf.Session() as sess:
     print(a.eval()) # 5.0
     print(b.eval()) # 6.0
     print(c.eval()) # 30.0
+    summary=tf.summary.FileWriter("log",sess.graph)
     tf.train.write_graph(sess.graph_def, './', 'add_graph.pb', as_text=False)
